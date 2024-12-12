@@ -16,7 +16,7 @@ LinkedList::~LinkedList()
 void LinkedList::addNode(int data_)
 {
 	Node* newNode = new Node(data_);
-	if (head == nullptr)
+	if (head == nullptr) 
 	{
 		head = tail = newNode;
 		return;
@@ -72,6 +72,7 @@ void LinkedList::Remove(int _data)
 		node->prev->next = node->next;
 
 	}
+	delete node;
 
 }
 Node* LinkedList::GetNode(int data_)

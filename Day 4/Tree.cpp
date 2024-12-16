@@ -215,7 +215,8 @@ int Tree::maxDepthCal(Node* node)
 	}
 	int left = maxDepthCal(node->left);
 	int right = maxDepthCal(node->right);
-	return 1 + max(left, right);
+
+	return (left >right ? ++left: ++right);
 }
 int Tree:: maxDepth()
 {
